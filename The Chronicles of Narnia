@@ -10,5 +10,4 @@ int main()
     int final;
     final=f+g;
     cout<<"the sum of two digit number is : "<<final;
-    
 }
