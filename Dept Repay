@@ -1,0 +1,27 @@
+#include<iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+    float p,y,r;
+//p(principle) y(year)(rate)
+    cout<<"Enter the value of p : ";
+    cin>>p;
+    cout<<"\nEnter the value of y : ";
+    cin>>y;
+    cout<<"\nEnter the value of r : ";
+    cin>>r;
+    float si;
+    si=(p*y*r)/100;
+    float a;
+    a=p+si;
+    float d;
+     d=(0.02)*si;
+    float final;
+    final=a-d;
+    cout<<fixed<<setprecision(2);
+    cout<<si<<endl;
+     cout<<a<<endl;
+      cout<<d<<endl;
+       cout<<final<<endl;
+       return 
