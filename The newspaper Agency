@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int w,x,y;
+    cout<<"Enter the values :" ;
+    cin>>w>>x>>y;
+    int profit;
+    profit=(w*x)-(w*y)-100;
+    cout<<"Enter the profit :"<<profit;
+}
