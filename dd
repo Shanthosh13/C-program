@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int d,f,g;
+    cout<<"Enter the 2 digit : ";
+    cin>>d;
+    f=d/10;
+    g=d%10;
+    int final;
+    final=f+g;
+    cout<<"the sum of two digit number is : "<<final;
+    
+}
