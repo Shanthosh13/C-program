@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int TS,Team;
+    cout<<"Enter the no.of students : ";
+    cin>>TS;
+    cout<<"Enter the teams";
+    cin>>Team;
+    int perteam;
+    perteam=TS/Team;
+    int left;
+    left=TS %Team;
+    cout<<"The student in team: "<<perteam;
+    cout<<"\nThe student left in team : "<<left ;
+    
+}
