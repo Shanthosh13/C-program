@@ -16,7 +16,7 @@ else if(units<=600)
 {
     bill=units*(0.80)+200;
 }
-else if(units>600)
+else (units>600)
 {
     bill=units*(1.25)+425;
 }
