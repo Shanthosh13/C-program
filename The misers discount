@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   float i1,i2,d;
+    cout<<"Enter the items and discount :";
+    cin>>i1;
+    cin>>i2;
+    cin>>d;
+    int a=(i1+i2);
+    int b=(d/100)*a;
+    int c=a-b;
+    cout<<"Amount = "<<a;
+    cout<<"Discount = "<<b;
+    cout<<"Final pay : "<<c;
+}
