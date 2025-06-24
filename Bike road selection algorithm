@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c, sp;
+    cin >> a >> b >> c >> sp;
+
+    if (sp <= 0) {
+        cout << "No path exist";
+    } else {
+        double sa = (double)a / sp;
+        double sb = (double)b / sp;
+        double sc = (double)c / sp;
+
+        if (sa <= sb && sa <= sc) {
+            cout << "Bike 1 goes into road A";
+        } else if (sb <= sa && sb <= sc) {
+            cout << "Bike 1 goes into road B";
+        } else {
+            cout << "Bike 1 goes into road C";
+        }
+    }
+
+    return 0;
+}
