@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int a,b,c;
+  cin>>a>>b>>c;
+  int ab=75;
+  int ba=50;
+  int n=(ab*b)+(ba*c);
+  if(n<a){
+    cout<<"Boat is stable";
+  }else{
+    cout<<"Boat will drown";
+  }
+}
