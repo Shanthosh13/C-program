@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int min, max;
+    cin >> min >> max;
+
+    int sum = 0;
+    int i = min;
+
+    while (i <= max) {
+        sum += i;
+        i++;
+    }
+
+    cout << sum;
+    return 0;
+}
