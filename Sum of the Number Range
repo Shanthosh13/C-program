@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, sum = 0;  // Declare variables
+
+    do {
+        cin >> num;  // Read a number from the user
+
+        if (num != -1) {  // Check if the number is not -1
+            sum += num;   // Add the number to the sum
+        }
+    } while (num != -1);  // Repeat until user enters -1
+
+    cout << sum;  // Output the final sum
+    return 0;
+}
