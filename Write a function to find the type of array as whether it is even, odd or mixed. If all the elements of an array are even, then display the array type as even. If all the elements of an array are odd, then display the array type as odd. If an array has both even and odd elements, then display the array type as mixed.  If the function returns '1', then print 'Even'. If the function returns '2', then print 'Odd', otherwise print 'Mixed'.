@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+// Function to determine the type of array
+int findType(int size, int *arr) {
+    bool hasEven = false, hasOdd = false;
+
+    for(int i = 0; i < size; i++) {
+        if(arr[i] % 2 == 0) {
+            hasEven = true;
+        } else {
+            hasOdd = true;
+        }
+    }
+
+    if(hasEven && hasOdd)
+        return 0; // Mixed
+    else if(hasEven)
+        return 1; // Even
+    else
+        return 2; // Odd
+}
+
+int main() {
+    int size;
+    cin >> size;
+
+    int arr[size];
+    for(int i = 0; i < size; i++) {
+        cin >> arr[i];
+    }
+
+    int result = findType(size, arr);
+
+    if(result == 1)
+        cout << "Even" << endl;
+    else if(result == 2)
+        cout << "Odd" << endl;
+    else
+        cout << "Mixed" << endl;
+
+    return 0;
+}
