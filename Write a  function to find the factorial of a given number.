@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+long long Fact(int a) {
+    long long r = 1;
+    for (int i=2;i<=a;i++){
+        r *= i;
+    }
+    return r;  
+}
+
+int main() {
+    int a;
+    cin >> a;
+    cout << Fact(a) << endl;  
+    return 0;
+}
