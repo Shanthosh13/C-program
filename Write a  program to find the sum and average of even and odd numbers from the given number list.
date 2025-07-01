@@ -1,0 +1,38 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+
+int main() {
+    int n;  
+    int eS = 0, oS = 0; 
+    int eC= 0, oC = 0;   
+
+    
+    while (cin >> n&& n!= -1) {
+        if (n% 2 == 0) {
+            eS +=n ;  
+            eC++;  
+        } else {  
+            oS+= n;  
+            oC++;  
+        }
+    }
+
+   
+    float evenAvg = 0.0f;
+    if (eC > 0) {
+        evenAvg = (float)eS/eC;
+    }
+
+    float oddAvg = 0.0f;
+    if (oC> 0) {
+        oddAvg = (float)oS / oC;  
+    }
+
+    
+    cout <<eS<<endl<<oS<<endl;
+    cout<<fixed<<setprecision(2);
+    cout<<evenAvg<<endl<<oddAvg;
+
+    return 0;
+}
