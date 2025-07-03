@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std; 
+int main() { 
+  int n; cin >> n; 
+  int total = n; 
+  
+  int leftover = n; 
+  double root = sqrt(n); 
+  while (leftover >= root)
+  { 
+    leftover = leftover / root;
+  total += leftover; 
+    
+  }
+  cout<<total<<endl;
+  return 0; 
+  
+}
