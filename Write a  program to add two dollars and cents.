@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int dollars1, cents1;
+    int dollars2, cents2;
+
+    cout << "Enter first amount (dollars and cents): ";
+    cin >> dollars1 >> cents1;
+
+    cout << "Enter second amount (dollars and cents): ";
+    cin >> dollars2 >> cents2;
+
+    int totalCents = cents1 + cents2;
+    int totalDollars = dollars1 + dollars2;
+
+    
+    if (totalCents >= 100) {
+        totalDollars += totalCents / 100;
+        totalCents = totalCents % 100;
+    }
+
+    cout << "Total amount = " << totalDollars << " dollars and " << totalCents << " cents" << endl;
+
+    return 0;
+}
