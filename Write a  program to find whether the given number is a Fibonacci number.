@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+
+bool isPerfectSquare(int x) {
+    int s = 0;
+    while (s * s < x) {
+        s++;
+    }
+    return s * s == x;
+}
+
+
+bool isFibonacci(int n) {
+    
+    return isPerfectSquare(5 * n * n + 4) || isPerfectSquare(5 * n * n - 4);
+}
+
+int main() {
+    int num ;
+    cin>>num;
+
+    if (isFibonacci(num)) {
+        cout << "Fibonacci Number" << endl;
+    } else {
+        cout << "Not Fibonacci Number" << endl;
+    }
+
+    return 0;
+}
