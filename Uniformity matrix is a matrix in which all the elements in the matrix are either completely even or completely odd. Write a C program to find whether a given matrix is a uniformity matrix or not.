@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    int matrix[n][n];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+
+    bool isUniform = true;
+
+    int firstParity = matrix[0][0] % 2;
+    for (int i = 0; i < n && isUniform; i++) {
+        for (int j = 0; j < n; j++) {
+            if (matrix[i][j] % 2 != firstParity) {
+                isUniform = false;
+                break;
+            }
+        }
+    }
+
+    if (isUniform) {
+        cout << "Yes";
+    } else {
+        cout << "No";
+    }
+
+    return 0;
+}
