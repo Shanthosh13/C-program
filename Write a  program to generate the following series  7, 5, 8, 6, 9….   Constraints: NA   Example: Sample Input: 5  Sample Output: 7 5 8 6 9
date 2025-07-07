@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    int odd = 7;  
+    int even = 5; 
+
+    for (int i = 1; i <= n; i++) {
+        if (i % 2 != 0) {
+            cout << odd << " ";
+            odd++;
+        } else {
+            cout << even << " ";
+            even++;
+        }
+    }
+
+    return 0;
+}
