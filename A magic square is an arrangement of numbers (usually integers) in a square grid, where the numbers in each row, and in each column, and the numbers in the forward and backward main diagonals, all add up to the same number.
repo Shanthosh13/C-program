@@ -1,0 +1,60 @@
+#include <iostream>
+
+using namespace std;
+
+bool isMagicSquare(int matrix[][5], int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += matrix[0][i];
+    }
+   for (int i = 1; i < n; i++) {
+        int rowSum = 0;
+        for (int j = 0; j < n; j++) {
+            rowSum += matrix[i][j];
+        }
+        if (rowSum != sum) return false;
+    }
+
+    // Check all columns
+    for (int i = 0; i < n; i++) {
+        int colSum = 0;
+        for (int j = 0; j < n; j++) {
+            colSum += matrix[j][i];
+        }
+        if (colSum != sum) return false;
+    }
+
+    // Check the main diagonal
+    int diagSum1 = 0;
+    for (int i = 0; i < n; i++) {
+        diagSum1 += matrix[i][i];
+    }
+    if (diagSum1 != sum) return false;
+
+    int diagSum2 = 0;
+    for (int i = 0; i < n; i++) {
+        diagSum2 += matrix[i][n - i - 1];
+    }
+    if (diagSum2 != sum) return false;
+
+    return true;
+}
+
+int main() {
+    int n;
+    cin >> n;  
+    int matrix[5][5];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+
+    if (isMagicSquare(matrix, n)) {
+        cout << "yes" << endl;
+    } else {
+        cout << "no" << endl;
+    }
+
+    return 0;
+}
