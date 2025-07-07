@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    int matrix[5][5];
+
+    // Read matrix elements
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+
+    bool isLowerTriangular = true;
+
+    // Check elements above the main diagonal
+    for (int i = 0; i < n && isLowerTriangular; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (matrix[i][j] != 0) {
+                isLowerTriangular = false;
+                break;
+            }
+        }
+    }
+
+    if (isLowerTriangular) {
+        cout << "yes";
+    } else {
+        cout << "no";
+    }
+
+    return 0;
+}
