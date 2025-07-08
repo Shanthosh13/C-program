@@ -1,0 +1,17 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class Venue{
+  public:
+  string name;
+  string city;
+};
+int main()
+{
+  Venue v;
+  getline(cin,v.name);
+  getline(cin,v.city);
+  cout<<"Venue Details:"<<endl;
+  cout<<"Venue Name: "<<v.name<<endl;
+  cout<<"City Name: "<<v.city<<endl;
+}
