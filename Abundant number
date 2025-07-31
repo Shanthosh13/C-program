@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, sum = 0;
+    cin >> num;
+
+    // Find sum of proper divisors
+    for (int i = 1; i <= num / 2; i++) {
+        if (num % i == 0)
+            sum += i;
+    }
+
+    // Check if sum is greater than the number
+    if (sum > num)
+        cout << "Abundant Number" << endl;
+    else
+        cout << "Not Abundant Number" << endl;
+
+    return 0;
+}
